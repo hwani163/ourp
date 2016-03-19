@@ -10,12 +10,12 @@ var session = router.session;
 
 
 //mongoose connect
-mongoose.connect('mongodb://localhost/test',function(err){
-	if(err){
-		console.log('mongoose connection error :'+err);
-		throw err;
-	}
-});
+//mongoose.connect('mongodb://localhost/test',function(err){
+//	if(err){
+//		console.log('mongoose connection error :'+err);
+//		throw err;
+//	}
+//});
 
 
 
