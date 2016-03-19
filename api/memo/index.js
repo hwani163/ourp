@@ -2,9 +2,9 @@ var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
 
-var MemoSchema= mongoose.Schema({email:String,contents:String,time:String});
+//var MemoSchema= mongoose.Schema({email:String,contents:String,time:String});
 
-var Memo = mongoose.model('memo',MemoSchema);
+//var Memo = mongoose.model('memo',MemoSchema);
 
 
 
