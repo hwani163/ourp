@@ -1,104 +1,73 @@
-<!DOCTYPE HTML>
-<!--
-	Identity by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
+
 <html>
-	<head>
-		<title>Identity by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-loading">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <link rel="stylesheet" type="text/css" href="../static/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/framework.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/washington.css">
+  <script src="../static/js/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="../static/js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="../static/images/logoStandford32.ico">
+  <link rel="apple-touch-icon" href="../static/images/logoStandford32.ico">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <link href="../static/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <section class="w-section mobile-wrapper">
 
-				<!-- Main -->
-					<section id="main">
-						<header>
-							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
-							<h1>Jane Doe</h1>
-							<p>Senior Psychonautics Engineer</p>
-						</header>
-						
-						<hr />
-						<h2>Extra Stuff!</h2>
-						<form id = 'sign' method="post" action="/auth.do">
-							<div class="field">
-								<input type="email" name="email" id="email" placeholder="Email" />
-							</div>
-							<div class="field">
-								<input type="password" name="password" id="password" placeholder="Password" />
-							</div>
-							<!-- <div class="field">
-								<div class="select-wrapper">
-									<select name="department" id="department">
-										<option value="">Department</option>
-										<option value="sales">Sales</option>
-										<option value="tech">Tech Support</option>
-										<option value="null">/dev/null</option>
-									</select>
-								</div>
-							</div>
-							<div class="field">
-								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-							</div>
-							<div class="field">
-								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-							</div>
-							<div class="field">
-								<label>But are you a robot?</label>
-								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
-							</div> -->
-							<ul class="actions">
-								<li><button class="button" id="start">Get Started</button></li>
-							</ul>
-						</form>
-						<hr />
-						
-						<footer>
-							<ul class="icons">
-								<li><a href="#" class="fa-twitter">Twitter</a></li>
-								<li><a href="#" class="fa-instagram">Instagram</a></li>
-								<li><a href="#" class="fa-facebook">Facebook</a></li>
-							</ul>
-						</footer>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>&copy; Jane Doe</li>
-							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script src="assets/js/jquery.min.js"></script>
-			
-			
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-				
-				$('#start').onclick = function(){
-					$('#sign').submit();
-				}
-				
-			</script>
-
-	</body>
+    <div class="page-content" id="main-stack" data-scroll="0">
+      <div class="w-nav navbar"></div>
+      <div class="body padding">
+        <div class="logo-login"></div>
+        <div class="bottom-section padding">
+          <div class="w-form">
+            <form id="submit-form" name="email-form" data-name="Email Form" data-redirect="../main/main.html" action="#">
+              <div>
+                <label class="label-form" for="email-field">USERNAME</label>
+                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <div class="separator-fields"></div>
+              </div>
+              <div>
+                <label class="label-form" for="email">PASSWORD</label>
+                <div class="w-clearfix block-input-combined">
+                  <input class="w-input input-form left" id="password-field" type="password" name="password" data-name="password" required="required"><a class="right-input-link" href="../forgot.html" data-load="1">Forgot Password</a>
+                </div>
+                <div class="separator-button-input"></div>
+              </div>
+              <input class="w-button action-button" type="submit" value="Sign In" data-wait="Please wait...">
+              <div class="separator-button"></div><a class="link-upper" href="../signup/signup.html" data-load="1">YOU DON’T HAVE AN ACCOUNT? <strong class="b-link">SIGN UP</strong></a>
+            </form>
+            <div class="w-form-done">
+              <p>Thank you! Your submission has been received!</p>
+            </div>
+            <div class="w-form-fail">
+              <p>Oops! Something went wrong while submitting the form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-content loading-mask" id="new-stack">
+      <div class="loading-icon">
+        <div class="navbar-button-icon icon ion-load-d"></div>
+      </div>
+    </div>
+    <div class="shadow-layer"></div>
+  </section>
+  <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+  <script type="text/javascript" src="../static/js/framework.js"></script>
+  <!--[if lte IE 9]>
+  <script src="../static/js/placeholders.min.js"></script><![endif]-->
+</body>
 </html>

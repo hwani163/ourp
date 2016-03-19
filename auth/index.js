@@ -47,7 +47,7 @@ router.get('/', function(req, res, next) {
 					req.session.logined = user.email; //세션에 이메일 저장
 
 					res.writeHead(302,{
-						'Location' : 'main/main.html'
+						'Location' : 'main/settings.html'
 					});
 					res.end();
 
@@ -65,7 +65,7 @@ router.get('/', function(req, res, next) {
 				req.session.logined = sessionUser.email; //세션에 이메일 저장
 				console.log("세션에 저장된 내용입니다."+req.session.logined);
 				res.writeHead(302,{
-					'Location' : 'main/main.html'
+					'Location' : 'main/settings.html'
 				});
 				res.end();
 			}
