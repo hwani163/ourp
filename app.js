@@ -1,3 +1,4 @@
+"use strict"
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -5,6 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var mysql = require('mysql');
 
 
 var app = express();
@@ -31,6 +33,8 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+
+
 
 
 require('./routes')(app);
